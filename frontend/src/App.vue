@@ -24,6 +24,7 @@ onMounted(async () => {
     :preco="manga.price"
     :volume="manga.number"
     :sumario="manga.summary"
+    :capa="manga.cover"
     ></MangaCard>
   </div>
 </div>

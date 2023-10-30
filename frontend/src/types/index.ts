@@ -7,7 +7,7 @@ export type Manga = {
   cover: Cover
 }
 
-type Cover = {
+export type Cover = {
   url: string,
   altenativeText: string
 }

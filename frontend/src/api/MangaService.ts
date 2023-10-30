@@ -6,7 +6,11 @@ class MangaService {
   
   async  all(page = 1, pageSize = 24): Promise<Manga[]> {
     try {
-      const { data } = await api.get('/mangas', {})
+      const { data } = await api.get('/mangas', {
+        params: {
+          populate: 'cover',
+        }
+      })
       return data.data
     } catch (e) {
       return Error("Não foi possível carregar")
