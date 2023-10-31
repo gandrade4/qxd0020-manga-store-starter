@@ -15,13 +15,15 @@ function getUploadURL(capa: Cover) {
 </script>
 
 <template>
-<div class="card shadow-sm">
-  <img class="card-img-top" width="100%" :src="getUploadURL(capa)" :alt="capa.altenativeText">
-  <div class="card-body">
-    <h5 class="card-title">{{ volume }} - {{ titulo }}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Preço: {{ preco }}</h6>
+<router-link :to="`/mangas/${id}`">
+  <div class="card shadow-sm">
+    <img class="card-img-top" width="100%" :src="getUploadURL(capa)" :alt="capa.altenativeText">
+    <div class="card-body">
+      <h5 class="card-title">{{ volume }} - {{ titulo }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Preço: {{ preco }}</h6>
+    </div>
   </div>
-</div>
+</router-link>
 </template>
 
 <style scoped>
