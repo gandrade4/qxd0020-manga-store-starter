@@ -5,17 +5,13 @@ class MangaService {
   constructor() {}
   
   async  all(page = 1, pageSize = 24): Promise<Manga[]> {
-    try {
-      const { data } = await api.get('/mangas', {
+      const { data } = await api.get('/mangas/${id}', {
         params: {
           populate: 'cover',
         }
       })
       return data.data
-    } catch (e) {
-      return Error("Não foi possível carregar")
     }
   }
-}
 
 export const mangaService = new MangaService()
