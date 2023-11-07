@@ -4,7 +4,8 @@
   "info": {
     "singularName": "manga",
     "pluralName": "mangas",
-    "displayName": "Manga"
+    "displayName": "Manga",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,12 +28,18 @@
       "type": "string"
     },
     "cover": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "manga"
     }
   }
 }
