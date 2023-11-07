@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { baseURL } from '@/api'
+import { getUploadURL } from '@/composables/useUploadFile'
 import { type Cover } from '@/types'
 defineProps<{
   id: number,
@@ -8,16 +8,12 @@ defineProps<{
   volume: number
   capa: Cover
 }>()
-
-function getUploadURL(capa: Cover) {
-  return `${baseURL}${capa.url}`
-}
 </script>
 
 <template>
 <router-link :to="`/mangas/${id}`">
   <div class="card shadow-sm">
-    <img class="card-img-top" width="100%" :src="getUploadURL(capa)" :alt="capa.altenativeText">
+    <img class="card-img-top" width="100%" :src="getUploadURL(capa.url)" :alt="capa.altenativeText">
     <div class="card-body">
       <h5 class="card-title">{{ volume }} - {{ titulo }}</h5>
       <h6 class="card-subtitle mb-2 text-muted">Preço: {{ preco }}</h6>
