@@ -13,7 +13,9 @@ onMounted(async () => {
   try {
     mangas.value = await mangaService.all()
   } catch (e) {
-    error.value = e.message
+    if(e instanceof Error) {
+      error.value = e.message
+    }
   } finally {
     loading.value = false
   }

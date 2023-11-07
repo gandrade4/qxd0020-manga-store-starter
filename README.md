@@ -65,8 +65,8 @@ yarn dev
 ## Versão por aula
 
 - Aula 30/10/2023: Criando o projeto do MangaStore e listando os Mangás na página inicial
-- Aula 31/10/2024: Configurando o VueRouter e configurando a rota da página principal.
-- Aula 06/11/2024: Tratamento de erro e Página de detalhes do mangá.
+- Aula 31/10/2023: Configurando o VueRouter e configurando a rota da página principal.
+- Aula 06/11/2023: Tratamento de erro e Página de detalhes do mangá.
 - **Feito fora de sala**: Comentário e Spinner de carregamento.
-
+- Aula 07/11/2023: Pinia e Autenticação via JWT.
   
