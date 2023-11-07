@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Comment } from '../../types'
-import Rating from './Rating.vue'
+import { type Comment } from '@/types'
+import Rating from '@/components/Comment/Rating.vue'
 
 defineProps<Omit<Comment, "id">>()
 </script>

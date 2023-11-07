@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { type Manga } from '@/types'
 import { getUploadURL } from '@/composables/useUploadFile'
 import { mangaService } from '@/api/MangaService'
+import CommentsContainer from '@/components/Comment/Container.vue'
 
 const loading = ref(true)
 const manga = ref<Manga>({} as Manga) 
@@ -48,10 +49,8 @@ onMounted(async () => {
 
     </div>
   </div>
-  <!--
-    <div class="row">
-      <CommentsContainer class="col-12" :comments="manga.comments"></CommentsContainer>
-    </div>
-  -->
+  <div class="row">
+    <CommentsContainer class="col-12" :comments="manga.comments"></CommentsContainer>
+  </div>
 </div>  
 </template>

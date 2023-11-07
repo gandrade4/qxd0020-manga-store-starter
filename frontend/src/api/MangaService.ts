@@ -16,7 +16,7 @@ class MangaService {
   async get(id: number): Promise<Manga> {
     const { data } = await api.get(`/mangas/${id}`, {
       params: {
-        populate: 'cover',
+        populate: ['cover', 'comments'],
       }
     })
     return data.data
